@@ -1,4 +1,5 @@
 pub mod proxy;
+pub mod events;
 
 #[cfg(test)]
 mod tests {
