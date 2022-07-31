@@ -4,6 +4,12 @@ pub struct Transceiver (
     pub broadcast::Sender<String>, pub broadcast::Receiver<String>
 );
 
+impl Clone for Transceiver {
+    fn clone(&self) -> Self {
+        Transceiver (self.0.clone(), self.1.resubscribe())
+    }
+}
+
 pub struct EventHandler {
     alice: Transceiver,
     bob: Transceiver
@@ -22,6 +28,7 @@ impl EventHandler {
     }
 }
 
+#[derive(Clone)]
 pub struct Events {
     pub request: Transceiver,
     pub response: Transceiver

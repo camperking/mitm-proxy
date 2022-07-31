@@ -7,6 +7,4 @@ edition = "2021"
 
 [dependencies]
 tokio = { version = "1.20.1", features = ["full"] }
-
-[env]
-RUST_BACKTRACE=1
+hyper = { version = "0.14.20", features = ["full"]}
