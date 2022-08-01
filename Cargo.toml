@@ -7,4 +7,8 @@ edition = "2021"
 
 [dependencies]
 tokio = { version = "1.20.1", features = ["full"] }
-hyper = { version = "0.14.20", features = ["full"]}
+hyper = { version = "0.14.20", features = ["full"] }
+rcgen = { version = "0.9.3", features = ["pem", "x509-parser"] }
+rustls = { version = "0.20.6", features = ["logging"] }
+tokio-rustls = "0.23.4"
+pem = "1.1.0"

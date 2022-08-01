@@ -18,7 +18,7 @@ async fn main() {
             let modified = events.request.0.clone();
 
             tokio::spawn(async move {
-                println!("request: {:#?}", request);
+                // println!("request: {:#?}", request);
                 // edit request here
                 modified.send("modified request".to_string()).unwrap();
             });
