@@ -1,6 +1,6 @@
 use std::{thread, time};
-use proxy::proxy::Proxy;
-use proxy::events::{EventsBuilder};
+use mitmProxy::proxy::Proxy;
+use mitmProxy::events::{EventsBuilder};
 
 #[tokio::main]
 async fn main() {
